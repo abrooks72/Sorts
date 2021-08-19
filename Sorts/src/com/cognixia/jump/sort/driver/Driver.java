@@ -1,6 +1,7 @@
 package com.cognixia.jump.sort.driver;
 
 import com.cognixia.jump.quadratic.BubbleSort;
+import com.cognixia.jump.quadratic.InsertionSort;
 
 public class Driver {
 
@@ -14,7 +15,8 @@ public class Driver {
                 System.out.print(arr[i] + " ");  
         }  
         System.out.println(); 
-		result = BubbleSort.bubble(arr);
+		//result = BubbleSort.bubble(arr);
+        result = InsertionSort.insertion(arr);
 		
 		System.out.println("Array After Bubble Sort");  		// After sort array
         for(int i=0; i < arr.length; i++){  
