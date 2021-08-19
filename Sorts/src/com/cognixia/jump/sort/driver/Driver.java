@@ -31,16 +31,18 @@ public class Driver {
         
         
         if(choice == 1) {
+        	System.out.println("Utilizing Bubblesort");
         	result = BubbleSort.bubble(arr);
         }
         else if(choice == 2) {
+        	System.out.println("Utilizing Insertionsort");
         	result = InsertionSort.insertion(arr);
         }
         else if(choice == 3) {
+        	System.out.println("Utilizing Selectionsort");
         	result = SelectionSort.selection(arr);
         }
         
-		System.out.println("\n");
 		System.out.println("Array After Sorting");  		// After sort array
         for(int i=0; i < arr.length; i++){  
                 System.out.print(arr[i] + " ");  
