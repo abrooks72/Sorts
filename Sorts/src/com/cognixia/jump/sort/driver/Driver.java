@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.cognixia.jump.quadratic.BubbleSort;
 import com.cognixia.jump.quadratic.InsertionSort;
+import com.cognixia.jump.quadratic.SelectionSort;
 
 public class Driver {
 
@@ -21,6 +22,8 @@ public class Driver {
         
         System.out.println("1: Bubble Sort");
         System.out.println("2: Insertion Sort");
+        System.out.println("3: Selection Sort");
+        
         System.out.println("What sorting algorithm would you like to use: ");
         int choice = scan.nextInt();
         scan.close();
@@ -32,6 +35,9 @@ public class Driver {
         }
         else if(choice == 2) {
         	result = InsertionSort.insertion(arr);
+        }
+        else if(choice == 3) {
+        	result = SelectionSort.selection(arr);
         }
         
 		System.out.println("\n");
