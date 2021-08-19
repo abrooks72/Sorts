@@ -2,7 +2,7 @@ package com.cognixia.jump.quadratic;
 
 public class BubbleSort {
 	
-	public int[] bubble(int[] myArray) {
+	public static int[] bubble(int[] myArray) {
 		
 		int temp = 0;
 		
