@@ -1,5 +1,7 @@
 package com.cognixia.jump.sort.driver;
 
+import java.util.Scanner;
+
 import com.cognixia.jump.quadratic.BubbleSort;
 import com.cognixia.jump.quadratic.InsertionSort;
 
@@ -10,15 +12,30 @@ public class Driver {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Array Before Bubble Sort");  		// Before array
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Array Before Sorting");  		// Before array
         for(int i=0; i < arr.length; i++){  
                 System.out.print(arr[i] + " ");  
         }  
-        System.out.println(); 
-		//result = BubbleSort.bubble(arr);
-        result = InsertionSort.insertion(arr);
-		
-		System.out.println("Array After Bubble Sort");  		// After sort array
+        System.out.println("\n"); 
+        
+        System.out.println("1: Bubble Sort");
+        System.out.println("2: Insertion Sort");
+        System.out.println("What sorting algorithm would you like to use: ");
+        int choice = scan.nextInt();
+        scan.close();
+        
+        
+        
+        if(choice == 1) {
+        	result = BubbleSort.bubble(arr);
+        }
+        else if(choice == 2) {
+        	result = InsertionSort.insertion(arr);
+        }
+        
+		System.out.println("\n");
+		System.out.println("Array After Sorting");  		// After sort array
         for(int i=0; i < arr.length; i++){  
                 System.out.print(arr[i] + " ");  
         }
