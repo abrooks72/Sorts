@@ -29,6 +29,7 @@ public class Driver {
         scan.close();
         
         
+        System.out.println("\n");
         
         if(choice == 1) {
         	System.out.println("Utilizing Bubblesort");
