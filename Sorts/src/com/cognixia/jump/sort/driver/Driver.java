@@ -33,28 +33,44 @@ public class Driver {
         
         
         System.out.println("\n");
+        long startTime;
+        long endTime;
         
         if(choice == 1) {
-        	System.out.println("Utilizing Bubblesort");
+        	System.out.println("Utilizing Bubble sort");
+        	startTime = System.currentTimeMillis();
         	result = BubbleSort.bubble(arr);
+        	endTime = System.currentTimeMillis();
+        	System.out.println("Time: " + (endTime - startTime) + " milliseconds");
         }
         else if(choice == 2) {
-        	System.out.println("Utilizing Insertionsort");
+        	System.out.println("Utilizing Insertion sort");
+        	startTime = System.currentTimeMillis();
         	result = InsertionSort.insertion(arr);
+        	endTime = System.currentTimeMillis();
+        	System.out.println("Time: " + (endTime - startTime) + " milliseconds");
         }
         else if(choice == 3) {
-        	System.out.println("Utilizing Selectionsort");
+        	System.out.println("Utilizing Selection sort");
+        	startTime = System.currentTimeMillis();
         	result = SelectionSort.selection(arr);
+        	endTime = System.currentTimeMillis();
+        	System.out.println("Time: " + (endTime - startTime) + " milliseconds");
         }
         else if(choice == 4) {
-        	System.out.println("Utilizing Quicksort");
+        	System.out.println("Utilizing Quick sort");
+        	startTime = System.currentTimeMillis();
         	QuickSort.quickSort(arr, 0, arr.length-1);
+        	endTime = System.currentTimeMillis();
+        	System.out.println("Time: " + (endTime - startTime) + " milliseconds");
         }
         
 		System.out.println("Array After Sorting");  		// After sort array
         for(int i=0; i < arr.length; i++){  
                 System.out.print(arr[i] + " ");  
         }
+        
+        
 	}
 
 }
