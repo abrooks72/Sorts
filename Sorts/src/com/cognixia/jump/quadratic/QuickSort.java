@@ -37,7 +37,7 @@ public class QuickSort {
 	    return (i + 1);
 	  }
 	  
-	  static void quickSort(int array[], int low, int high) {
+	  public static void quickSort(int array[], int low, int high) {
 		    if (low < high) {
 
 		      // find pivot element such that

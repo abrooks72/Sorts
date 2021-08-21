@@ -1,9 +1,11 @@
 package com.cognixia.jump.sort.driver;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import com.cognixia.jump.quadratic.BubbleSort;
 import com.cognixia.jump.quadratic.InsertionSort;
+import com.cognixia.jump.quadratic.QuickSort;
 import com.cognixia.jump.quadratic.SelectionSort;
 
 public class Driver {
@@ -23,6 +25,7 @@ public class Driver {
         System.out.println("1: Bubble Sort");
         System.out.println("2: Insertion Sort");
         System.out.println("3: Selection Sort");
+        System.out.println("4: Quick Sort");
         
         System.out.println("What sorting algorithm would you like to use: ");
         int choice = scan.nextInt();
@@ -42,6 +45,10 @@ public class Driver {
         else if(choice == 3) {
         	System.out.println("Utilizing Selectionsort");
         	result = SelectionSort.selection(arr);
+        }
+        else if(choice == 4) {
+        	System.out.println("Utilizing Quicksort");
+        	QuickSort.quickSort(arr, 0, arr.length-1);
         }
         
 		System.out.println("Array After Sorting");  		// After sort array
