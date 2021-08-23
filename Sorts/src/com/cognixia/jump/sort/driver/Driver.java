@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 import com.cognixia.jump.quadratic.BubbleSort;
+import com.cognixia.jump.quadratic.BucketSort;
 import com.cognixia.jump.quadratic.InsertionSort;
 import com.cognixia.jump.quadratic.QuickSort;
 import com.cognixia.jump.quadratic.SelectionSort;
@@ -26,6 +27,7 @@ public class Driver {
         System.out.println("2: Insertion Sort");
         System.out.println("3: Selection Sort");
         System.out.println("4: Quick Sort");
+        System.out.println("5: Bucket Sort");
         
         System.out.println("What sorting algorithm would you like to use: ");
         int choice = scan.nextInt();
@@ -64,6 +66,14 @@ public class Driver {
         	endTime = System.currentTimeMillis();
         	System.out.println("Time: " + (endTime - startTime) + " milliseconds");
         }
+        else if(choice == 5) {
+        	System.out.println("Utilizing Bucket sort");
+        	startTime = System.currentTimeMillis();
+        	result = BucketSort.bucketsort(arr);
+        	endTime = System.currentTimeMillis();
+        	System.out.println("Time: " + (endTime - startTime) + " milliseconds");
+        }
+        
         
 		System.out.println("Array After Sorting");  		// After sort array
         for(int i=0; i < arr.length; i++){  
