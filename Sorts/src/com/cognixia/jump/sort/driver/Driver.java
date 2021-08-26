@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 import com.cognixia.jump.nlog.HeapSort;
+import com.cognixia.jump.nlog.MergeSort;
 import com.cognixia.jump.quadratic.BubbleSort;
 import com.cognixia.jump.quadratic.BucketSort;
 import com.cognixia.jump.quadratic.InsertionSort;
@@ -30,6 +31,7 @@ public class Driver {
         System.out.println("4: Quick Sort");
         System.out.println("5: Bucket Sort");
         System.out.println("6: Heap Sort");
+        System.out.println("7: Merge Sort");
         
         System.out.println("What sorting algorithm would you like to use: ");
         int choice = scan.nextInt();
@@ -79,6 +81,13 @@ public class Driver {
         	System.out.println("Utilizing Heap sort");
         	startTime = System.currentTimeMillis();
         	HeapSort.sort(arr);
+        	endTime = System.currentTimeMillis();
+        	System.out.println("Time: " + (endTime - startTime) + " milliseconds");
+        }
+        else if(choice == 7) {
+        	System.out.println("Utilizing Merge sort");
+        	startTime = System.currentTimeMillis();
+        	MergeSort.Sort(arr,0,arr.length-1);
         	endTime = System.currentTimeMillis();
         	System.out.println("Time: " + (endTime - startTime) + " milliseconds");
         }
